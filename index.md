@@ -1,37 +1,64 @@
-## Welcome to GitHub Pages
+# Sequelize MVC! 
 
-You can use the [editor on GitHub](https://github.com/ayusudi/Sequelize-MVC/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Melanjutkan dari **DEMO FishAquarium** 🐟
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+telah diketahui bahwa terdapat Table **Fishes** & Model **Fish** 
 
-### Markdown
+| FIELD/COLUMN   |   Data Type    |
+| -------------- | -------------- |
+| id             | SERIAL         | 
+| name           | VARCHAR        |
+| type           | VARCHAR        |
+| weight         | INTEGER        |
+| color          | VARCHAR        |
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Kita akan membuat aplikasi yang memiliki fitur sederhana yaitu Create & Read! 
 
-```markdown
-Syntax highlighted code block
+---
 
-# Header 1
-## Header 2
-### Header 3
+## Halaman Home atau GET /
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Sekarang kita telah menggunakan **Sequelize**.  
+jika kita memiliki class Fish bagaimana cara kita merequire ke app.js? 
+```txt
+A. const Fish = require("./models/fish.js")
+B. const Fish = require("./models")
+C. const Fish = require("./models").Fish
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Halaman home memilki list ikan-ikan yang kita miliki
+> Demi keindahan demo pagi ini, mari kita gunakan tampilan yang enak diliat~
 
-### Jekyll Themes
+![Image1](./list.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ayusudi/Sequelize-MVC/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Feature Create Fish atau GET /add & POST /add
 
-### Support or Contact
+Terdapat form untuk menambahkan ikan sesuai, pada form telah tersedia semua input yang kita butuhkan untuk data Fish.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![Image2](./form.png)
+
+
+
+## Instance Method & Static Method 
+
+Sequelize telah memberikan banyak built-in Method yang dibuatkan oleh Sequelize.
+```txt
+Static Method : ModelName.method(param)
+  Fish.findAll()
+  Fish.create(data)
+
+Instance Method : instance.method(param)
+  data.save()
+```
+
+<details> 
+  <summary>Bagaimana jika kamu membutuhkan method buatan sendiri?  </summary>
+   Maka dapat kita tulis method2 tsb ke <b>class</b> Model yang kita miliki.<br>
+   untuk case ini berarti di <b>class Fish</b>.<br><br>(static method, instance method, getter)
+   
+</details>
+
+![Image3](./listAndInstanceMethod.png)
+
+🔴 🟡 🟢 🔵
