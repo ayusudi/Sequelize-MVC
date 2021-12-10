@@ -30,13 +30,13 @@ C. const Fish = require("./models").Fish
 Halaman home memilki list ikan-ikan yang kita miliki
 > Demi keindahan demo pagi ini, mari kita gunakan tampilan yang enak diliat~
 
-![Image1](./asset/list.png)
+![Image1](./list.png)
 
 ## Feature Create Fish atau GET /add & POST /add
 
 Terdapat form untuk menambahkan ikan sesuai, pada form telah tersedia semua input yang kita butuhkan untuk data Fish.
 
-![Image2](./asset/form.png)
+![Image2](./form.png)
 
 
 
@@ -59,6 +59,6 @@ Instance Method : instance.method(param)
    
 </details>
 
-![Image3](./asset/listAndInstanceMethod.png)
+![Image3](./listAndInstanceMethod.png)
 
 🔴 🟡 🟢 🔵
